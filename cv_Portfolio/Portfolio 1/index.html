@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sylla Youssouf — Développeur Web Junior (PHP / Laravel / JS)</title>
+
+    <!-- SEO / Social -->
+    <meta name="description" content="Portfolio de Sylla Youssouf — Développeur Web & Mobile Junior. PHP, Laravel, MySQL, JavaScript, React.js, Flutter. Basé à Abidjan." />
+    <meta property="og:title" content="Sylla Youssouf — Développeur Web Junior" />
+    <meta property="og:description" content="Portfolio — PHP, Laravel, MySQL, React.js. Voir projets, CV et contact." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/images/favicon.png" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <!-- Structured data (JSON-LD) pour recruteurs / crawlers -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Person",
+      "name":"Sylla Youssouf",
+      "jobTitle":"Développeur Web & Mobile Junior",
+      "url":"https://ton-site-ou-portfolio.example",
+      "sameAs":[
+        "https://github.com/Syllayoussoufdev",
+        "https://www.linkedin.com/in/tes-lien"
+      ],
+      "address":{
+        "@type":"PostalAddress",
+        "addressLocality":"Abidjan",
+        "addressCountry":"CI"
+      }
+    }
+    </script>
+</head>
+<body>
+<nav class="navbar" id="navbar" role="navigation" aria-label="Navigation principale">
+  <div class="nav-container container">
+    <a class="nav-logo" href="#accueil">Sylla Y.</a>
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <div id="nav-menu" class="nav-menu" role="menu">
+      <a class="nav-link" href="#accueil">Accueil</a>
+      <a class="nav-link" href="#apropos">À propos</a>
+      <a class="nav-link" href="#competences">Compétences</a>
+      <a class="nav-link" href="#projets">Projets</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <!-- HERO -->
+  <section id="accueil" class="hero" aria-labelledby="hero-title">
+    <div class="container hero-content">
+      <div class="hero-left">
+        <div class="profile-photo" aria-hidden="true">
+          <!-- Si tu as une vraie photo, remplacer data-src par src (lazy-loading) -->
+          <img data-src="images/profil.png" alt="Photo de Sylla Youssouf" />
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <h1 id="hero-title" class="hero-title">Sylla Youssouf</h1>
+        <p class="hero-subtitle">Développeur Web & Mobile Junior — PHP · Laravel · JavaScript · React</p>
+        <p class="hero-description">J'aide les équipes à livrer des applications web robustes : back-end en PHP/Laravel et front moderne (JS/React). Expérience en déploiement, tests et documentation.</p>
+
+        <div class="hero-buttons">
+          <!-- lien direct vers ton CV (PDF) -->
+          <a class="btn btn-primary" target="_blank" href="https://drive.google.com/file/d/1QcazYWZxhZDElVoAtrI3aunBUd6ih-Qs/view?usp=sharing" download aria-label="Télécharger le CV de Sylla Youssouf">
+            <i class="fas fa-download"></i> Télécharger mon CV
+          </a>
+          <a class="btn btn-secondary" href="#contact"><i class="fas fa-envelope"></i> Me contacter</a>
+        </div>
+
+        <!-- Skills quick badges -->
+        <div class="quick-skills" aria-hidden="false">
+          <span class="skill-badge">PHP</span>
+          <span class="skill-badge">Laravel</span>
+          <span class="skill-badge">MySQL</span>
+          <span class="skill-badge">JavaScript</span>
+          <span class="skill-badge">React</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A PROPOS -->
+  <section id="apropos" class="about container" aria-labelledby="apropos-title">
+    <h2 id="apropos-title" class="section-title">À propos de moi</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>Diplômé BTS Informatique — j'ai réalisé un stage full-stack chez Stratos-CI (PHP / Laravel). J'aime produire code maintenable, écrire docs et automatiser déploiements. Je suis à la recherche d'un poste junior où je pourrai contribuer à des projets réels et apprendre au contact d'une équipe expérimentée.</p>
+
+        <h3>Étude de cas — Système de gestion des recrutements</h3>
+        <p><strong>Rôle :</strong> Développeur back-end / intégration front<br />
+        <strong>Stack :</strong> Laravel, MySQL, Bootstrap<br />
+        <strong>Livrables :</strong> API CRUD candidats, interface admin, documentation déploiement</p>
+        <p class="muted">Lien du repo et démo git <a target="_blank" href="https://github.com/Syllayoussoufdev/Laravel_initiation">ici</a></p>
+      </div>
+
+      <aside class="about-cards" aria-label="Informations personnelles">
+        <div class="info-card">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          <h4>Localisation</h4>
+          <p>Abidjan, Côte d'Ivoire</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <h4>Email</h4>
+          <p><a href="mailto:youssoufs1209@gmail.com">youssoufs1209@gmail.com</a></p>
+        </div>
+        <div class="info-card">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <h4>GitHub</h4>
+          <p><a href="https://github.com/Syllayoussoufdev" target="_blank" rel="noopener">Syllayoussoufdev</a></p>
+        </div>
+        <div class="info-card">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <h4>LinkedIn</h4>
+          <p><a href="https://www.linkedin.com/in/sylla-youssouf-devweb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">Sylla Youssouf</a></p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- COMPETENCES -->
+  <section id="competences" class="skills container" aria-labelledby="comp-title">
+    <h2 id="comp-title" class="section-title">Compétences</h2>
+
+    <div class="skills-grid">
+      <!-- cards simplifiées et accessibles -->
+      <div class="skill-category" aria-hidden="false">
+        <h3><i class="fas fa-code" aria-hidden="true"></i> Backend</h3>
+        <ul>
+          <li>PHP — 80% (Laravel : 60% - Symfony : 50 %)</li>
+          <li>MySQL — 80%</li>
+          <li>POO, MVC, ORM, (60 %)</li>
+          <li>Python - 80 % (Django : 45 %)</li>
+          <li>BD MySQL, SQLite, MongoDB, (80%) </li>
+        </ul>
+      </div>
+
+      <div class="skill-category" aria-hidden="false">
+        <h3><i class="fas fa-laptop-code" aria-hidden="true"></i> Frontend</h3>
+        <ul>
+          <li>HTML / CSS / JavaScript — 80%</li>
+          <li>React.js — 40%</li>
+          <li>Bootstrap / Responsive</li>
+          <li>tailwind css / Responsive</li>
+          <li>Integration de templates</li>
+        </ul>
+      </div>
+
+      <div class="skill-category" aria-hidden="false">
+        <h3><i class="fas fa-tools" aria-hidden="true"></i> Outils</h3>
+        <ul>
+          <li>Git / GitHub — 80%</li>
+          <li>Docker (basics)</li>
+          <li>Documentation & tests</li>
+        </ul>
+      </div>
+
+      <div class="skill-category" aria-hidden="false">
+        <h3><i class="fa-solid fa-window-maximize" aria-hidden="true"></i> NoCode</h3>
+        <ul>
+          <li>Wordpress — 90%</li>
+          <li>N8N, Notion </li>
+          <li>Apprentissage continue</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETS (mise en avant étude de cas) -->
+  <section id="projets" class="projects container" aria-labelledby="projets-title">
+    <h2 id="projets-title" class="section-title">Projets</h2>
+
+    <div class="projects-grid">
+      <!-- Projet 1 : recrutement (étude de cas détaillée) -->
+      <article class="project-card" aria-labelledby="p1">
+        <div class="project-image" aria-hidden="true"><i class="fas fa-users"></i></div>
+        <div class="project-content">
+          <h3 id="p1">Système de gestion des recrutements</h3>
+          <p>Plateforme back-office pour gérer les offres, candidatures et workflows de recrutement. API REST, gestion fichiers CV, pagination et filtres.</p>
+          <div class="project-tech"><span class="tech-tag">Laravel</span><span class="tech-tag">MySQL</span><span class="tech-tag">Bootstrap</span></div>
+          <div class="project-buttons">
+            <a class="btn btn-small" href="#" aria-disabled="true">Voir la démo (à venir)</a>
+            <a class="btn btn-outline" href="https://github.com/Syllayoussoufdev" target="_blank" rel="noopener">Repo GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Autres projets -->
+      <article class="project-card" aria-labelledby="p2">
+        <div class="project-image" aria-hidden="true"><i class="fas fa-chart-bar"></i></div>
+        <div class="project-content">
+          <h3 id="p2">Dashboard utilisateur</h3>
+          <p>Dashboard admin responsive avec graphiques et exports CSV. Front JS + APIs.</p>
+          <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">JS</span><span class="tech-tag">Charts</span></div>
+          <div class="project-buttons">
+            <a class="btn btn-small" href="#">Voir en ligne</a>
+            <a class="btn btn-outline" href="https://github.com/Syllayoussoufdev" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact container" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="section-title">Contactez-moi</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <h3>Parlons de votre projet</h3>
+        <p>Envoyez un email ou ouvrez une discussion sur GitHub pour échanger sur une mission.</p>
+
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:youssoufs1209@gmail.com"><i class="fas fa-envelope"></i> youssoufs1209@gmail.com</a>
+          <a class="contact-link" target="_blank" href="https://wa.me/qr/N52YRPVCXNDIN1" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a class="contact-link" target="_blank" href="https://github.com/Syllayoussoufdev" target="_blank"><i class=" fab fa-github"></i> GitHub</a>
+          <a class="contact-link" target="_blank" href="https://www.linkedin.com/in/sylla-youssouf-devweb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
+
+      <form id="contact-form" class="contact-form" aria-label="Formulaire de contact">
+        <div class="form-group">
+          <label for="name">Nom</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Envoyer</button>
+        <p class="muted small">Formulaire simule l'envoi localement — pour production, connecte un service (Formspree, Netlify Forms ou backend).</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>&copy; <span id="year"></span> Sylla Youssouf — Développeur Web & Mobile Junior. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
