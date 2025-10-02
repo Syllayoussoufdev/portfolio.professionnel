@@ -702,3 +702,70 @@ if (!window.requestAnimationFrame) {
         return setTimeout(callback, 1000 / 60);
     };
 }
+// script.js (extrait principal)
+
+window.__ENABLE_FX = false; // mettre true pour effets (confettis, trail). False = plus pro/perf.
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile nav toggle (accessibility)
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    navToggle.setAttribute('aria-expanded', String(!expanded));
+    navMenu.classList.toggle('active');
+  });
+
+  // Lazy load images (data-src)
+  const lazyImgs = document.querySelectorAll('img[data-src]');
+  if ('IntersectionObserver' in window) {
+    const imgObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.removeAttribute('data-src');
+          obs.unobserve(img);
+        }
+      });
+    }, {rootMargin: '100px'});
+    lazyImgs.forEach(i => imgObserver.observe(i));
+  } else {
+    lazyImgs.forEach(i => i.src = i.dataset.src);
+  }
+
+  // Contact form simulate
+  const form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // validation simple
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const msg = form.message.value.trim();
+      if (!name || !email || !msg || msg.length < 10) {
+        alert('Veuillez remplir correctement le formulaire (message >= 10 caractères).');
+        return;
+      }
+      // Simulate send
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Envoi...';
+      setTimeout(() => {
+        alert('Message simulé envoyé. Merci !');
+        form.reset();
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Envoyer';
+      }, 1200);
+    });
+  }
+
+  // Optional visual FX
+  if (window.__ENABLE_FX) {
+    // réutilise tes fonctions confetti/particles si tu veux
+    // createParticles(); createCursorTrail(); etc.
+  }
+});

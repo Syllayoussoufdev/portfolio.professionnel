@@ -40,31 +40,37 @@
     </script>
 </head>
 <body>
-<nav class="navbar" id="navbar" role="navigation" aria-label="Navigation principale">
-  <div class="nav-container container">
-    <a class="nav-logo" href="#accueil">Sylla Y.</a>
-    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-    </button>
-    <div id="nav-menu" class="nav-menu" role="menu">
-      <a class="nav-link" href="#accueil">Accueil</a>
-      <a class="nav-link" href="#apropos">À propos</a>
-      <a class="nav-link" href="#competences">Compétences</a>
-      <a class="nav-link" href="#projets">Projets</a>
-      <a class="nav-link" href="#contact">Contact</a>
-    </div>
-  </div>
-</nav>
+<!-- Navigation fixe -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#accueil">Sylla Y.</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#accueil" class="nav-link active">Accueil</a>
+                <a href="#apropos" class="nav-link">À propos</a>
+                <a href="#competences" class="nav-link">Compétences</a>
+                <a href="#projets" class="nav-link">Projets</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <!-- Hamburger menu pour mobile -->
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
 <main>
   <!-- HERO -->
   <section id="accueil" class="hero" aria-labelledby="hero-title">
     <div class="container hero-content">
-      <div class="hero-left">
-        <div class="profile-photo" aria-hidden="true">
-          <!-- Si tu as une vraie photo, remplacer data-src par src (lazy-loading) -->
-          <img data-src="images/profil.png" alt="Photo de Sylla Youssouf" />
-        </div>
+      <div class="hero-image">
+          <!-- Placeholder pour votre photo - remplacez par votre vraie photo -->
+          <div class="profile-photo">
+              <img src="images2/profil.png" alt="Photo de profil" />
+          </div>
       </div>
 
       <div class="hero-right">
@@ -74,7 +80,7 @@
 
         <div class="hero-buttons">
           <!-- lien direct vers ton CV (PDF) -->
-          <a class="btn btn-primary" target="_blank" href="https://drive.google.com/file/d/1QcazYWZxhZDElVoAtrI3aunBUd6ih-Qs/view?usp=sharing" download aria-label="Télécharger le CV de Sylla Youssouf">
+          <a class="btn btn-primary" target="_blank" href="https://drive.google.com/file/d/1mA2k0gOmkoASggabQiGbFrHxa5KnnoCU/view?usp=sharing" download aria-label="Télécharger le CV de Sylla Youssouf">
             <i class="fas fa-download"></i> Télécharger mon CV
           </a>
           <a class="btn btn-secondary" href="#contact"><i class="fas fa-envelope"></i> Me contacter</a>
@@ -99,11 +105,37 @@
       <div class="about-text">
         <p>Diplômé BTS Informatique — j'ai réalisé un stage full-stack chez Stratos-CI (PHP / Laravel). J'aime produire code maintenable, écrire docs et automatiser déploiements. Je suis à la recherche d'un poste junior où je pourrai contribuer à des projets réels et apprendre au contact d'une équipe expérimentée.</p>
 
-        <h3>Étude de cas — Système de gestion des recrutements</h3>
-        <p><strong>Rôle :</strong> Développeur back-end / intégration front<br />
-        <strong>Stack :</strong> Laravel, MySQL, Bootstrap<br />
-        <strong>Livrables :</strong> API CRUD candidats, interface admin, documentation déploiement</p>
-        <p class="muted">Lien du repo et démo git <a target="_blank" href="https://github.com/Syllayoussoufdev/Laravel_initiation">ici</a></p>
+        <h3>Mon parcours</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2025</div>
+                            <div class="timeline-content">
+                                <h4>Assistant technique - MUSCOP-CI</h4>
+                                <p>Support utilisateurs, formation, déploiement applicatif</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023-2024</div>
+                            <div class="timeline-content">
+                                <h4>Stage développeur web - Stratos-CI</h4>
+                                <p>PHP/Laravel, MySQL, Bootstrap, correction de bugs et documentation</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2021-2023</div>
+                            <div class="timeline-content">
+                                <h4>BTS Informatique Développeur d'Applications</h4>
+                                <p>ISFMI Abidjan - Diplômé avec mention</p>
+                            </div>
+                        </div>
+                    </div>
+        <p class="muted">Lien vers mes repository et démo git 
+          <button class="btn btn-outline">
+            <i class="fab fa-github" href="https://github.com/Syllayoussoufdev/" target="_blank" rel="noopener">
+              ici
+            </i>
+          </button> 
+        </p>
       </div>
 
       <aside class="about-cards" aria-label="Informations personnelles">
@@ -132,7 +164,143 @@
   </section>
 
   <!-- COMPETENCES -->
-  <section id="competences" class="skills container" aria-labelledby="comp-title">
+   
+    <section id="competences" class="skills">
+        <div class="container">
+            <h2 class="section-title">Mes compétences</h2>
+            <div class="skills-grid">
+                <!-- Frontend Skills -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-palette"></i> Frontend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>HTML5</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>CSS3</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Bootstrap</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>React.js</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Skills -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>PHP</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Laravel</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>MySQL</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile & Outils -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-mobile-alt"></i> Mobile & Outils</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Flutter</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Git/GitHub</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>WordPress</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Documentation</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <section id="competences2" class="skills container" aria-labelledby="comp-title">
     <h2 id="comp-title" class="section-title">Compétences</h2>
 
     <div class="skills-grid">
