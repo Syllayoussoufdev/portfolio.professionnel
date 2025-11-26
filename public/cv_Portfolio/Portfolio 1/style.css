@@ -107,6 +107,7 @@ body {
     text-align: center;
 }
 
+
 .btn-primary {
     background: linear-gradient(135deg, var(--primary-color), #3b82f6);
     color: white;
@@ -266,7 +267,7 @@ body {
 }
 
 .profile-photo {
-    width: a;
+    width: 100px;
     height: 280px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
@@ -285,6 +286,12 @@ body {
 .profile-photo i {
     font-size: 120px;
     color: white;
+}
+.profile-photo img {
+    
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
 
 .hero-title {
@@ -313,19 +320,6 @@ body {
     gap: var(--spacing-sm);
     flex-wrap: wrap;
 }
-/* Focus visible (accessibility) */
-a:focus, button:focus, input:focus, textarea:focus {
-  outline: 3px solid rgba(37,99,235,0.25);
-  outline-offset: 2px;
-}
-
-/* Quick skill badges */
-.quick-skills { margin-top: 1rem; display:flex; gap:8px; flex-wrap:wrap; }
-.skill-badge { background:#eef2ff; color:#1e293b; padding:6px 10px; border-radius:999px; font-weight:600; }
-
-/* Project buttons disabled state */
-[aria-disabled="true"] { opacity: 0.6; pointer-events: none; }
-
 
 /* Indicateur de scroll */
 .scroll-indicator {
@@ -374,6 +368,18 @@ a:focus, button:focus, input:focus, textarea:focus {
     margin-bottom: var(--spacing-lg);
     text-align: justify;
 }
+/* Focus visible (accessibility) */
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 3px solid rgba(37,99,235,0.25);
+  outline-offset: 2px;
+}
+
+/* Quick skill badges */
+.quick-skills { margin-top: 1rem; display:flex; gap:8px; flex-wrap:wrap; }
+.skill-badge { background:#eef2ff; color:#1e293b; padding:6px 10px; border-radius:999px; font-weight:600; }
+
+/* Project buttons disabled state */
+[aria-disabled="true"] { opacity: 0.6; pointer-events: none; }
 
 .about-text h3 {
     font-size: var(--font-size-xl);
